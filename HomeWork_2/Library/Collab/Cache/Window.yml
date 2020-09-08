@@ -13,9 +13,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
-    m_Keys: []
-    m_Values: 
-  RevisionSummary: 
+    m_Keys:
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/DissolveSoft_Alpha_Additive.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/DissolveSoft_Alpha_Additive.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/DissolveSoft_Alpha_Additive_Opacity.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/DissolveSoft_Alpha_Additive_Opacity.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/DissolveSoft_Alpha_Additive_Opacity_softrim.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/DissolveSoft_Alpha_Additive_Opacity_softrim.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/DissolveSoft_Alpha_Additive_softrim.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/DissolveSoft_Alpha_Additive_softrim.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/DissolveSoft_Alpha_Unlit.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/DissolveSoft_Alpha_Unlit.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/DissolveSoft_Alpha_Unlit_Opacity.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/DissolveSoft_Alpha_Unlit_Opacity.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/DissolveSoft_Alpha_Unlit_Opacity_softrim.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/DissolveSoft_Alpha_Unlit_Opacity_softrim.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/DissolveSoft_Alpha_Unlit_softrim.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/DissolveSoft_Alpha_Unlit_softrim.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/Dissolve_Alpha_Additive.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/Dissolve_Alpha_Additive.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/Dissolve_Alpha_Additive_Opacity.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/Dissolve_Alpha_Additive_Opacity.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/Dissolve_Alpha_Additive_Opacity_softrim.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/Dissolve_Alpha_Additive_Opacity_softrim.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/Dissolve_Alpha_Additive_softrim.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/Dissolve_Alpha_Additive_softrim.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/Dissolve_Alpha_Unlit.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/Dissolve_Alpha_Unlit.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/Dissolve_Alpha_Unlit_Opacity.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/Dissolve_Alpha_Unlit_Opacity.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/Dissolve_Alpha_Unlit_Opacity_softrim.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/Dissolve_Alpha_Unlit_Opacity_softrim.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/Dissolve_Alpha_Unlit_softrim.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/legacy/Dissolve_Alpha_Unlit_softrim.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/softrim.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/softrim/Particle_softrim_add.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/softrim/Particle_softrim_add.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/softrim/Particle_softrim_add_stretch.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/softrim/Particle_softrim_add_stretch.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/softrim/Particle_softrim_alpha.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/softrim/Particle_softrim_alpha.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/softrim/Particle_softrim_alpha_stretch.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/softrim/Particle_softrim_alpha_stretch.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/unity5.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/unity5/Editor.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/unity5/Editor/CustomMaterialEditor.cs
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/unity5/Editor/CustomMaterialEditor.cs.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/unity5/Editor/Shader_softrim_dissolve.cs
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/unity5/Editor/Shader_softrim_dissolve.cs.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/unity5/Particle_Softrim_Dissolve_additive.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/unity5/Particle_Softrim_Dissolve_additive.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/unity5/Particle_Softrim_Dissolve_alpha.shader
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/unity5/Particle_Softrim_Dissolve_alpha.shader.meta
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/unity5/TestMaterial.mat
+    - Assets/Particle Dissolve Shader by Moonflower Carnivore/Shaders/unity5/TestMaterial.mat.meta
+    - 
+    m_Values: 0101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+  RevisionSummary: HomeWork_3_End
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0
