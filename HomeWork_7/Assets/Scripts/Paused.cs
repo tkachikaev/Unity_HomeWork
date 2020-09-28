@@ -1,21 +1,39 @@
-﻿using System;
+﻿using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
+/// <summary>
+/// Пауза
+/// </summary>
 public class Paused : MonoBehaviour
 {
-    private bool paused;
-    public void PausedAndPlay()
+    public GameObject GameStatistics;
+    [Header("Отключить сцены во время паузы")]
+    public GameObject[] DisableAndEnableWindowsPause;
+    private bool _pause = true;
+    public void Pause()
     {
-        if (paused)
+        if (_pause)
         {
-            Time.timeScale = 1;
+            Time.timeScale = 0f;
+            for (int i = 0; i < DisableAndEnableWindowsPause.GetLength(0); i++)
+            {
+                DisableAndEnableWindowsPause[i].SetActive(false);
+            } //pause
+            GameStatistics.SetActive(true);
         }
         else
         {
-            Time.timeScale = 0;
+            Time.timeScale = 1f;
+            for (int i = 0; i < DisableAndEnableWindowsPause.GetLength(0); i++)
+            {
+                DisableAndEnableWindowsPause[i].SetActive(true);
+            } //unpause
+            GameStatistics.SetActive(false);
         }
-        paused = !paused; // true - flse / false true
+        _pause = !_pause;
     }
 }

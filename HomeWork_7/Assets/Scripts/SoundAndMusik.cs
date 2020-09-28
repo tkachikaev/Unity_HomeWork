@@ -4,57 +4,60 @@ using UnityEngine;
 
 public class SoundAndMusik : MonoBehaviour
 {
-    #region Music and Sound
-    public AudioSource soundTheam = null;
-    public AudioSource effectTheame = null;
-    public AudioSource createPerson = null;
-    public AudioClip soundVillage = null;
-    public AudioClip soundBattle = null;
-    public AudioClip soundButton = null;
-    public AudioClip soundCreateWorker = null;
-    public AudioClip SoundCreateWarrior = null;
-    #endregion
+    public AudioSource SoundTheam = null;
+    public AudioSource EffectTheame = null;
+    public AudioSource CreatePerson = null;
+    public AudioSource EffectRaid = null;
+    public AudioClip ClipVillage = null;
+    public AudioClip ClipButton = null;
+    public AudioClip ClipCreateWorker = null;
+    public AudioClip ClipCreateWarrior = null;
+    public AudioClip ClipRaid = null;
 
+    private void Start()
+    {
+        SoundVillage();
+    }
     /// <summary>
     /// Фоновая музыка города
     /// </summary>
-    public void OnSoundVillage()
+    public void SoundVillage()
     {
-        soundTheam.clip = soundVillage;
-        soundTheam.Play();
-        soundTheam.loop = true;
-    }
-    /// <summary>
-    /// Фоновая музыка биты
-    /// </summary>
-    public void OnSoundBattle()
-    {
-        soundTheam.clip = soundBattle;
-        soundTheam.Play();
+        SoundTheam.clip = ClipVillage;
+        SoundTheam.Play();
+        SoundTheam.loop = true;
     }
     /// <summary>
     /// Звук кнопки
     /// </summary>
-    public void OnSoundButton()
+    public void SoundButton()
     {
-        effectTheame.clip = soundButton;
-        effectTheame.Play();
-        effectTheame.loop = false;
+        EffectTheame.clip = ClipButton;
+        EffectTheame.Play();
+        EffectTheame.loop = false;
     }
     /// <summary>
     /// Звук создания работника
     /// </summary>
-    public void CreateWorker()
+    public void SoundCreateWorker()
     {
-        createPerson.clip = soundCreateWorker;
-        createPerson.Play();
+        CreatePerson.clip = ClipCreateWorker;
+        CreatePerson.Play();
     }
     /// <summary>
     /// Звук создания война
     /// </summary>
-    public void CreateWarrior()
+    public void SoundCreateWarrior()
     {
-        createPerson.clip = SoundCreateWarrior;
-        createPerson.Play();
+        CreatePerson.clip = ClipCreateWarrior;
+        CreatePerson.Play();
+    }
+    /// <summary>
+    /// Нападение на деревню
+    /// </summary>
+    public void SoundRaid()
+    {
+        EffectRaid.clip = ClipRaid;
+        EffectRaid.Play();
     }
 }
