@@ -5,7 +5,7 @@ using UnityEngine;
 public class PointToPoint : MonoBehaviour
 {
     public GameObject Player;
-    public Transform[] Points;
+    public Vector3[] Points;
     public float Speed;
     public bool Forward = true;
     public int N = 0;
@@ -20,7 +20,7 @@ public class PointToPoint : MonoBehaviour
     {
         if (Forward == true)
         {
-            Player.transform.position = Vector3.MoveTowards(Player.transform.position, Points[N].position, Speed * Time.deltaTime);
+            Player.transform.position = Vector3.MoveTowards(Player.transform.position, Points[N], Speed * Time.deltaTime);
             CheckPoind();
             if (N == Points.Length - 1)
             {
@@ -29,7 +29,7 @@ public class PointToPoint : MonoBehaviour
         }
         if (Forward == false)
         {
-            Player.transform.position = Vector3.MoveTowards(Player.transform.position, Points[N].position, Speed * Time.deltaTime);
+            Player.transform.position = Vector3.MoveTowards(Player.transform.position, Points[N], Speed * Time.deltaTime);
             CheckPoind();
             if (N == 0)
             {
@@ -40,13 +40,13 @@ public class PointToPoint : MonoBehaviour
 
     private void CheckPoind()
     {
-        if (Forward == true && Player.transform.position == Points[N].position)
+        if (Forward == true && Player.transform.position == Points[N])
         {
             N++;
             Player.transform.LookAt(Points[N]);
 
         }
-        if (Forward == false && Player.transform.position == Points[N].position)
+        if (Forward == false && Player.transform.position == Points[N])
         {
             N--;
             Player.transform.LookAt(Points[N]);
