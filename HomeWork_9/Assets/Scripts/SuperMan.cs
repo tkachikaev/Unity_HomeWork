@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class SuperMan : MonoBehaviour
 {
-    public Vector3[] Points;
+    public GameObject[] Points;
     public AudioClip Shot;
     public float Speed;
     public float Power = 1;
@@ -28,8 +28,8 @@ public class SuperMan : MonoBehaviour
     {
         if (_forward == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Points[_n], Speed * Time.deltaTime);
-            if (transform.position == Points[_n])
+            transform.position = Vector3.MoveTowards(transform.position, Points[_n].transform.position, Speed * Time.deltaTime);
+            if (transform.position == Points[_n].transform.position)
             {
                 _n++;
             }
@@ -40,8 +40,8 @@ public class SuperMan : MonoBehaviour
         }
         if (_forward == false)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Points[_n], Speed * Time.deltaTime);
-            if (transform.position == Points[_n])
+            transform.position = Vector3.MoveTowards(transform.position, Points[_n].transform.position, Speed * Time.deltaTime);
+            if (transform.position == Points[_n].transform.position)
             {
                 _n--;
             }
@@ -60,6 +60,11 @@ public class SuperMan : MonoBehaviour
             Vector3 direction = collision.transform.position - transform.position;
             collision.rigidbody.AddForce(direction.normalized * Power *(Vector3.Distance(transform.position, collision.transform.position)), ForceMode.Impulse);
             _audioSource.Play();
+            if (_n == Points.Length - 1)
+            {
+                _forward = false;
+            }
+            _n++; // Когда пнем, меняем цель
         }
     }
 }
