@@ -6,18 +6,24 @@ using UnityEngine.UIElements;
 
 public class SuperMan : MonoBehaviour
 {
-    public GameObject[] Points;
+    public Vector3[] Points;
     public AudioClip Shot;
     public float Speed;
     public float Power = 1;
     private AudioSource _audioSource;
-    private int _n = 0;
-    private bool _forward = true;
+    [SerializeField]private int _n = 0;
+    private bool _move = true;
 
     public void Start()
     {
         _audioSource = GetComponent<AudioSource>();
         _audioSource.clip = Shot;
+        Boys[] AllBoys = FindObjectsOfType<Boys>();
+        for (int i = 0; i < AllBoys.Length; i++)
+        {
+            Points[i] = AllBoys[i].transform.position;
+        }
+        transform.LookAt(Points[_n]);
     }
 
     void Update()
@@ -26,45 +32,27 @@ public class SuperMan : MonoBehaviour
     }
     public void PalayerMove()
     {
-        if (_forward == true)
+        if (_move == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Points[_n].transform.position, Speed * Time.deltaTime);
-            if (transform.position == Points[_n].transform.position)
+            transform.position = Vector3.MoveTowards(transform.position, Points[_n], Speed * Time.deltaTime);
+            if (transform.position == Points[_n])
             {
                 _n++;
+                transform.LookAt(Points[_n]);
             }
             if (_n == Points.Length -1)
             {
-                _forward = false;
-            }
-        }
-        if (_forward == false)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, Points[_n].transform.position, Speed * Time.deltaTime);
-            if (transform.position == Points[_n].transform.position)
-            {
-                _n--;
-            }
-            if (_n == 0)
-            {
-                _forward = true;
+                _move = false;
             }
         }
     }
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "BadBoy")
-        {
-            float distance = Vector3.Distance(transform.position, collision.transform.position);
-            Vector3 direction = collision.transform.position - transform.position;
-            collision.rigidbody.AddForce(direction.normalized * Power *(Vector3.Distance(transform.position, collision.transform.position)), ForceMode.Impulse);
-            _audioSource.Play();
-            if (_n == Points.Length - 1)
-            {
-                _forward = false;
-            }
-            _n++; // Когда пнем, меняем цель
-        }
+        
+        //float distance = Vector3.Distance(transform.position, collision.transform.position);
+        Vector3 direction = collision.transform.position - transform.position;
+        collision.rigidbody.AddForce(direction.normalized * Power, ForceMode.Impulse); // *(Vector3.Distance(transform.position, collision.transform.position))
+        _audioSource.Play();
     }
 }
