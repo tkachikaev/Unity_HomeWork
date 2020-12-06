@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Boll.cs" />
+    <Compile Include="Assets\Scripts\Boom.cs" />
     <Compile Include="Assets\Scripts\Boys.cs" />
     <Compile Include="Assets\Scripts\GravitySphere.cs" />
     <Compile Include="Assets\Scripts\Lunka.cs" />
